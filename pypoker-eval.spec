@@ -1,13 +1,13 @@
 Name:           pypoker-eval
-Version:        133.0
-Release:        %mkrel 4
+Version:        134.0
+Release:        %mkrel 1
 Epoch:          0
 Summary:        Python interface to poker-eval
 Group:          Development/Python
 License:        GPL
 URL:            http://pokersource.org/pypoker-eval/
-Source0:        http://download.gna.org/pokersource/sources/%{name}-%{version}.tar.bz2
-BuildRequires:  poker-eval-devel >= 0:133.0
+Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
+BuildRequires:  poker-eval-devel
 BuildRequires:  python-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -39,7 +39,8 @@ pypoker-eval.
 %setup -q
 
 # make examples directory for devel %doc
-%{__mkdir} -p tmp/examples && %{__cp} -a test.py tmp/examples
+%{__mkdir} -p tmp/examples
+%{__cp} -a test.py tmp/examples
 
 %build
 %{configure2_5x} --disable-static
@@ -69,5 +70,3 @@ pypoker-eval.
 %defattr(-,root,root,-)
 %doc tmp/examples
 %{_libdir}/pkgconfig/%{name}.pc
-
-
