@@ -9,6 +9,7 @@ URL:            http://pokersource.org/pypoker-eval/
 Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
 BuildRequires:  poker-eval-devel
 BuildRequires:  python-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 This package is python adaptor for the poker-eval toolkit for
