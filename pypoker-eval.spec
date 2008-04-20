@@ -1,5 +1,5 @@
 Name:           pypoker-eval
-Version:        134.0
+Version:        135.0
 Release:        %mkrel 1
 Epoch:          0
 Summary:        Python interface to poker-eval
