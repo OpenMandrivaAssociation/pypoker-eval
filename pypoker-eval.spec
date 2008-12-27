@@ -1,6 +1,6 @@
 Name:           pypoker-eval
-Version:        135.0
-Release:        %mkrel 2
+Version:        136.0
+Release:        %mkrel 1
 Epoch:          0
 Summary:        Python interface to poker-eval
 Group:          Development/Python
@@ -19,6 +19,7 @@ writing programs which simulate or analyze poker games.
 Summary:        Python interface to poker-eval
 Group:          Development/Python
 Provides:       %{name} = %{epoch}:%{version}-%{release}
+%py_requires -d
 
 %description -n python-pokereval
 This package is python adaptor for the poker-eval toolkit for
