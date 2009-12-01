@@ -1,10 +1,10 @@
 Name:           pypoker-eval
-Version:        136.0
-Release:        %mkrel 2
+Version:        137.0
+Release:        %mkrel 1
 Epoch:          0
 Summary:        Python interface to poker-eval
 Group:          Development/Python
-License:        GPL
+License:        GPLv3+
 URL:            http://pokersource.org/pypoker-eval/
 Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
 BuildRequires:  poker-eval-devel
