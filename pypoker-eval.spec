@@ -1,5 +1,5 @@
 Name:           pypoker-eval
-Version:        137.0
+Version:        138.0
 Release:        %mkrel 1
 Epoch:          0
 Summary:        Python interface to poker-eval
@@ -7,6 +7,7 @@ Group:          Development/Python
 License:        GPLv3+
 URL:            http://pokersource.org/pypoker-eval/
 Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
+Patch0:		pypoker-eval-137.0-py2.7.patch
 BuildRequires:  poker-eval-devel
 BuildRequires:  python-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -38,12 +39,14 @@ pypoker-eval.
 
 %prep
 %setup -q
+%patch0 -p0
 
 # make examples directory for devel %doc
 %{__mkdir} -p tmp/examples
 %{__cp} -a test.py tmp/examples
 
 %build
+autoreconf -fi
 %{configure2_5x} --disable-static
 %{make}
 
@@ -51,21 +54,16 @@ pypoker-eval.
 %{__rm} -rf %{buildroot}
 %{makeinstall_std}
 
-%check
-%{__python} test.py
- 
 %clean
 %{__rm} -rf %{buildroot}
+
+%check
+%{__python} test.py
 
 %files -n python-pokereval
 %defattr(-,root,root,-)
 %doc AUTHORS ChangeLog COPYING NEWS README
-%{python_sitearch}/*.so.*
-%{python_sitearch}/*.py
-%{python_sitearch}/*.pyc
-%{python_sitearch}/*.pyo
-%{python_sitearch}/*.so
-%{python_sitearch}/*.la
+%{python_sitearch}/*
 
 %files -n python-pokereval-devel
 %defattr(-,root,root,-)
