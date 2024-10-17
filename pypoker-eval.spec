@@ -5,7 +5,7 @@ Epoch:          0
 Summary:        Python interface to poker-eval
 Group:          Development/Python
 License:        GPLv3+
-URL:            http://pokersource.org/pypoker-eval/
+URL:            https://pokersource.org/pypoker-eval/
 Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
 Patch0:		pypoker-eval-137.0-py2.7.patch
 BuildRequires:  poker-eval-devel
