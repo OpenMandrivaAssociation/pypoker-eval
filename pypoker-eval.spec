@@ -8,6 +8,7 @@ License:        GPLv3+
 URL:            https://pokersource.org/pypoker-eval/
 Source0:        http://download.gna.org/pokersource/sources/pypoker-eval-%{version}.tar.gz
 Patch0:		pypoker-eval-137.0-py2.7.patch
+BuildRequires:	make
 BuildRequires:  poker-eval-devel
 BuildRequires:  python-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
