@@ -1,6 +1,6 @@
 Name:           pypoker-eval
 Version:        138.0
-Release:        %mkrel 1
+Release:        2
 Epoch:          0
 Summary:        Python interface to poker-eval
 Group:          Development/Python
